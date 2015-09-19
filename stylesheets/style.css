@@ -1,9 +1,5 @@
 body{
-  margin:0;
-  padding:0;
-  background-color: yellow;
-}
-form{
   margin-left: auto;
   margin-right: auto;
+  background-color: yellow;
 }
