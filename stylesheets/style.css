@@ -1,6 +1,10 @@
 html{
-  background-color: green;
+  background-color: blue;
 }
 div{
-  margin:0 auto;
+  position:absolute;
+  width:600px;
+  height:600px;
+  left:50%;
+  right:50%;
 }
