@@ -48,19 +48,6 @@ function num_check(m,n,r,c){
 	}
 return true;
 }
-//human entry error check
-function entry_check(a){
-	for(var i=0;i<9;i++){
-		for(var j=0;j<9;j++){
-			if(a[i][j]!=0){
-				if(!numcheck(a,a[i][j],i,j)){
-					return false;
-				}
-			}
-		}
-	}
-	return true;
-}
 		
 function next_empty_block(m,r,c){
 	if(m[r][c]==0){
@@ -126,17 +113,12 @@ $(document).ready(function(){
 			}
 		}
 		//solution
-		if(entry_check(a)){
-			sudoku(a,0,0);
-			//printing solution
-			for(var i=0;i<9;i++){
-				for(var j=0;j<9;j++){
-					$('#matrix tr:eq('+i+') td:eq('+j+') input').val(solution[i][j]);
-				}
+		sudoku(a,0,0);
+		//printing solution
+		for(var i=0;i<9;i++){
+			for(var j=0;j<9;j++){
+				$('#matrix tr:eq('+i+') td:eq('+j+') input').val(solution[i][j]);
 			}
-		}
-		else{
-			alert("Invalid sudoku entry!");
 		}
 	});
 });
