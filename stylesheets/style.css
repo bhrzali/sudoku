@@ -4,10 +4,5 @@ html, body{
   background-color: blue;
 }
 .table{
-  position:absolute;
-  width:600px;
-  height:600px;
-  left:50%;
-  right:50%;
-  border:1px solid grey;
+  margin:0 auto;
 }
