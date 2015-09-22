@@ -68,10 +68,10 @@ function next_empty_block(m,r,c){
 	}
 	return [r,c];
 }
-var t;
+var solution;
 function sudoku(m,r,c){
 	if(!next_empty_block(m,r,c)){
-		t=m;
+		solution=m;
 		return true;
 	}
 	var inputs = next_empty_block(m,r,c);
@@ -117,7 +117,7 @@ $(document).ready(function(){
 		//printing solution
 		for(var i=0;i<9;i++){
 			for(var j=0;j<9;j++){
-				$('#matrix tr:eq('+i+') td:eq('+j+') input').val(t[i][j]);
+				$('#matrix tr:eq('+i+') td:eq('+j+') input').val(solution[i][j]);
 			}
 		}
 	});
